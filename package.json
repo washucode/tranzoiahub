@@ -1,0 +1,25 @@
+{
+  "name": "tranzoiahub",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/washucode/tranzoiahub.git"
+  },
+  "author": "Esther Wachuka",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/washucode/tranzoiahub/issues"
+  },
+  "homepage": "https://github.com/washucode/tranzoiahub#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pug": "^3.0.2",
+    "twilio": "^3.63.1"
+  }
+}
