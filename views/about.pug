@@ -1,5 +1,255 @@
-html 
-    h1 this is about 
+doctype html
+html(lang='en')
+head
+    meta(charset='utf-8')
+    meta(content='width=device-width, initial-scale=1.0' name='viewport')
+    title Tranzoia Incubation Hub
+    meta(content='' name='description')
+    meta(content='' name='keywords')
+
+    link(href='/img/favicon.png' rel='icon')
+    link(href='/img/apple-touch-icon.png' rel='apple-touch-icon')
+    link(href='https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i,900' rel='stylesheet')
+    link(href='/vendor/animate.css/animate.min.css' rel='stylesheet')
+    link(href='/vendor/aos/aos.css' rel='stylesheet')
+    link(href='/vendor/bootstrap/css/bootstrap.min.css' rel='stylesheet')
+    link(href='/vendor/bootstrap-icons/bootstrap-icons.css' rel='stylesheet')
+    link(href='/vendor/boxicons/css/boxicons.min.css' rel='stylesheet')
+    link(href='/vendor/glightbox/css/glightbox.min.css' rel='stylesheet')
+    link(href='/vendor/swiper/swiper-bundle.min.css' rel='stylesheet')
+    link(href='/css/style.css', rel='stylesheet')
+    link(href='/vendor/remixicon/remixicon.css' rel='stylesheet')
+    link(href='/vendor/swiper/swiper-bundle.min.css' rel='stylesheet')
+
+    
 
 
+    
+
+// ======= Top Bar =======
+section#topbar.d-flex.align-items-center
+  .container.d-flex.justify-content-center.justify-content-md-between
+    .contact-info.d-flex.align-items-center
+      i.bi.bi-envelope-fill
+      a(href='mailto:contact@example.com') info@tranzoiahub.com
+      i.bi.bi-phone-fill.phone-icon
+      |  +254 124 456 789
+    .social-links.d-none.d-md-block
+      a.twitter(href='#')
+        i.bi.bi-twitter
+      a.facebook(href='#')
+        i.bi.bi-facebook
+      a.instagram(href='#')
+        i.bi.bi-instagram
+      a.linkedin(href='#')
+        i.bi.bi-linkedin
+// ======= Header =======
+header#header.d-flex.align-items-center
+  .container.d-flex.align-items-center
+    .logo.me-auto
+      h1
+        a(href='index.html') TRANZOIA INCUBATION HUB
+      // Uncomment below if you prefer to use an image logo
+      // <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>
+    nav#navbar.navbar
+      ul
+        li
+          a.nav-link.scrollto(href='/') Home
+        li
+          a.nav-link.scrollto.active(href='/about') About
+        li
+          a.nav-link.scrollto(href='/programs') Our Programs
+        li
+          a.nav-link.scrollto(href='/#contact') Contact Us
+        li
+          a.nav-link.scrollto(href='/#portfolio') Join Us
+      i.bi.bi-list.mobile-nav-toggle
+    // .navbar
+// End Header
+// ======= Hero Section =======
+
+ 
+main#main
+  .section-title 
+    h1.mt-5  About Us
+  // ======= About Us Section =======
+  section#about.about
+    .container(data-aos='fade-up')
+      .row.no-gutters
+        
+        .col-lg-6.video-box
+          img.img-fluid(src='/img/about2.jpg' alt='')
+          //- a.venobox.play-btn.mb-4(href='https://www.youtube.com/watch?v=jDDaplaOz7Q' data-vbtype='video' data-autoplay='true')
+        .col-lg-6.d-flex.flex-column.justify-content-center.about-content
+          .section-title
+            
+            //- h4 Our Mission
+            //- p
+            //-   |  We will develop a platform for the identification and implementation of innovative social and business solutions, including the establishing of startups.
+          .icon-box(data-aos='fade-up' data-aos-delay='100')
+            .icon
+              i.bx.bx-bullseye
+            h4.title
+              a(href='/about') Our Vision
+            p.description
+              | To develop social entrepreneurs who produce service businesses that provide health, social and educational services specifically focused on youth and youth at risk.
+          .icon-box(data-aos='fade-up' data-aos-delay='100')
+            .icon
+              i.bx.bxs-flag-checkered
+            h4.title
+              a(href='/about') Our Mission
+            p.description
+              | We will develop a platform for the identification and implementation of innovative social and business solutions, including the establishing of startups.
+        //-   a.btn-about.justify-content-center.mx-auto.animate__animated.animate__fadeInUp.scrollto(href='/about') Read More
+  // End About Us Section
+  
+
+  section#about.about
+    .container(data-aos='fade-up')
+      .row.no-gutters
+        
+        
+        .col-lg-12.d-flex.flex-column.justify-content-center.about-content
+          .section-title
+            
+            h2 Our Philosophy
+            p.text-center
+              |  All our actions are guided by the principles of incubate, innovate, invest for Social impact, Sustainable economies, and Scalable solutions.
+          .icon-box(data-aos='fade-up' data-aos-delay='100')
+            .icon
+              i.bx.bx-bar-chart-alt
+            h4.title
+              a(href='/about') Economic Sustainability &amp; Scalable Solutions
+            p.description
+              | We implement initiatives that are based upon medium and long term financing support and training / education in order to be able to attract valuable human resources and to supply products and services of highest quality.Depending on the business, founders need help fine-tuning their plan, hiring quality employees, figuring out the best way to market, creating their technology platform etc.         
+          .icon-box(data-aos='fade-up' data-aos-delay='100')
+            .icon
+             
+              i.bx.bxs-baby-carriage
+            h4.title
+              a(href='/about') Incubate &amp; Innovate
+            p.description
+              | The Tranzoia Innovation Hub incubator will combine technology and resource infrastructure that provides a mix of business services, systems, labs and practices to support start-up and small businesses in the commercialization of their products and services to the global marketplace. 
+
+          .icon-box(data-aos='fade-up' data-aos-delay='100')
+            .icon
+              i.bx.bx-donate-heart
+            h4.title
+              a(href='/about') Invest for social impact
+            p.description
+              | Recognizing the need for a comprehensive infrastructure, the Tranzoia Innovation Hub works proactively with the private sector, through the strategic alliances formed with public-private organizations, R&amp;D consortia, public entities and educational institutions.
+        //-   a.btn-about.justify-content-center.mx-auto.animate__animated.animate__fadeInUp.scrollto(href='/about') Read More
+  // End About Us Section
+  
+  
+  section.about-lists.mt-6
+    .container
+      .section-title
+        h2 Our Objectives
+      .row.no-gutters
+        .col-lg-4.col-md-12.content-item(data-aos='fade-up')
+          span 01
+          h4 Providing assistance critical to the survival of business ideas during the startup phase
+          p
+            | This is in order to facilitate development of client firms into financially viable, on-going business enterprises in the reasonable near term.
+        .col-lg-4.col-md-12.content-item(data-aos='fade-up' data-aos-delay='100')
+          span 02
+          h4 Facilitating commercial application of research and technology into markets.
+          p
+            |
+        .col-lg-4.col-md-12.content-item(data-aos='fade-up' data-aos-delay='200')
+          span 03
+          h4  Fostering partnerships
+          p
+            | Partnerships between educational institutions, entrepreneurs, public and private organizations, and small high-technology businesses for facilitating commercial application of systems and procedures developed.
+        .col-lg-4.col-md-12.content-item(data-aos='fade-up' data-aos-delay='300')
+          span 04
+          h4 Establishing a business incubator that is self-sustaining, independent of any outside funding.
+          p
+            |
+        .col-lg-4.col-md-12.content-item(data-aos='fade-up' data-aos-delay='400')
+          span 05
+          h4 Making opportunities available on a nationwide basis for Kenyan entities 
+          p
+            | Participate in the incubator as a service provider, client firm, and providers of services/products.
+      .row.readmore.justify-content-center.mt-5.mb-5
+        
+        .col-lg-2.col-md-4.icon-box(data-aos='fade-up' data-aos-delay='200')
+          a.btn-about.justify-content-center.mx-auto.animate__animated.animate__fadeInUp.scrollto(href='/joinus') JOIN US
+      
+         
+        
+  
+  
+         
+  // End About Lists Section
+footer#footer.mt-6
+  .footer-top
+    .container
+      .row
+        .col-lg-3.col-md-6.footer-info
+          h3 Tranzoia Hub
+          p
+            | A108 Adam Street 
+            br
+            |               Tsanzoia
+            br
+            br
+            strong Phone:
+            |  +254 789 345 678
+            br
+            strong Email:
+            |  info@tranzoiahub.com
+            br
+          .social-links.mt-3
+            a.twitter(href='#')
+              i.bx.bxl-twitter
+            a.facebook(href='#')
+              i.bx.bxl-facebook
+            a.instagram(href='#')
+              i.bx.bxl-instagram
+            a.google-plus(href='#')
+              i.bx.bxl-skype
+            a.linkedin(href='#')
+              i.bx.bxl-linkedin
+        .col-lg-2.col-md-6.footer-links
+          h4 Useful Links
+          ul
+            li
+              i.bx.bx-chevron-right
+              a(href='/') Home
+            li
+              i.bx.bx-chevron-right
+              a(href='#about') About us
+            li
+              i.bx.bx-chevron-right
+              a(href='/programs') Our Programs
+            
+        .col-lg-4.col-md-6.footer-newsletter
+          h4 Our Newsletter
+          p Tamen quem nulla quae legam multos aute sint culpa legam noster magna
+          form(action='' method='post')
+            input(type='email' name='email')
+            input(type='submit' value='Subscribe')
+  .container
+    .copyright
+      | &copy; Copyright 
+      strong
+        span Tranzoia
+      | . All Rights Reserved
+    .credits
+      
+// End Footer
+a.back-to-top.d-flex.align-items-center.justify-content-center(href='#')
+  i.bi.bi-arrow-up-short
+// Vendor JS Files
+script(src='/vendor/aos/aos.js')
+script(src='/vendor/bootstrap/js/bootstrap.bundle.min.js')
+script(src='/vendor/glightbox/js/glightbox.min.js')
+script(src='/vendor/isotope-layout/isotope.pkgd.min.js')
+script(src='/vendor/php-email-form/validate.js')
+script(src='/vendor/purecounter/purecounter.js')
+script(src='/vendor/swiper/swiper-bundle.min.js')
+// Template Main JS File
+script(src='/js/main.js')
 
