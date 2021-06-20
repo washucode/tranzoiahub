@@ -50,9 +50,9 @@ header#header.d-flex.align-items-center
         li
           a.nav-link.scrollto.active(href='#hero') Home
         li
-          a.nav-link.scrollto(href='#about') About
+          a.nav-link.scrollto(href='/about') About
         li
-          a.nav-link.scrollto(href='#services') Our Programs
+          a.nav-link.scrollto(href='/programs') Our Programs
         li
           a.nav-link.scrollto(href='#contact') Contact Us
         li
@@ -117,7 +117,7 @@ main#main
             h4.title
               a(href='/about') Purpose of this hub
             p.description
-              | Create and form systems of community response with guaranteed outcomes, by agreed community participation with the primary focus to develop social entrepreneurs who produce service businesses that provide health, social and educational services.
+              | Create and form systems of community response with guaranteed outcomes, by agreed community participation with the primary focus to develop social entrepreneurs who produce service businesses that provide health, social and educational programs.
           .icon-box(data-aos='fade-up' data-aos-delay='100')
             .icon
               i.bx.bx-group
@@ -128,8 +128,8 @@ main#main
           a.btn-about.justify-content-center.mx-auto.animate__animated.animate__fadeInUp.scrollto(href='/about') Read More
   // End About Us Section
   
-  // ======= Services Section =======
-  section#services.services
+  // ======= programs Section =======
+  section#programs.programs
     .container(data-aos='fade-up')
       .section-title
         h2 Our Programs
@@ -161,10 +161,16 @@ main#main
             i.bx.bx-bulb
           h4.title
             a(href='') Model business incubation and acceleration system
-          p.description.lh-lg
-            | For entrepreneurs, innovators and intra-preneurs in a college or TVET(Technical and Vocational Education and Training) setting
+          p.description
+            | For those in college or TVET
           a.btn-about.justify-content-center.mx-auto.animate__animated.animate__fadeInUp.scrollto(href='/programs') Read More
-  // End Services Section
+          //- h4.title
+          //-   a(href='') Model business incubation and acceleration system
+          //- p.description.lh-lg
+          //-   | For those in college or TVET
+          //-   //- (Technical and Vocational Education and Training)
+          //- a.btn-about.justify-content-center.mx-auto.animate__animated.animate__fadeInUp.scrollto(href='/programs') Read More
+  // End programs Section
   
   
   // ======= Contact Us Section =======
@@ -254,7 +260,7 @@ footer#footer
               a(href='#about') About us
             li
               i.bx.bx-chevron-right
-              a(href='/programs') Our Programs
+              a(href='#programs') Our Programs
             
         .col-lg-4.col-md-6.footer-newsletter
           h4 Our Newsletter
