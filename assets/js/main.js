@@ -38,23 +38,30 @@
   /**
    * Navbar links active state on scroll
    */
-  let navbarlinks = select('#navbar .scrollto', true)
-  const navbarlinksActive = () => {
-    let position = window.scrollY + 200
-    navbarlinks.forEach(navbarlink => {
-      if (!navbarlink.hash) return
-      let section = select(navbarlink.hash)
-      if (!section) return
-      if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
-        navbarlink.classList.add('active')
-      } else {
-        navbarlink.classList.remove('active')
-      }
-    })
-  }
-  window.addEventListener('load', navbarlinksActive)
-  onscroll(document, navbarlinksActive)
+   let navbarlinks = select('#navbar .scrollto', true)
+   const navbarlinksActive = () => {
+     let position = window.scrollY + 200
+     navbarlinks.forEach(navbarlink => {
+       if (!navbarlink.hash) return
+       let section = select(navbarlink.hash)
+       if (!section) return
+       if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
+         navbarlink.classList.add('active')
+       } else {
+         navbarlink.classList.remove('active')
+       }
+     })
+   }
+   window.addEventListener('load', navbarlinksActive)
+   onscroll(document, navbarlinksActive)
+ 
 
+  /**
+   * Navbar links active state on scroll
+   */
+  
+ 
+  
   /**
    * Scrolls to an element with header offset
    */
@@ -126,6 +133,24 @@
     this.classList.toggle('bi-x')
   })
 
+  on('click', '#nav-pills1 ', function(e) {
+   
+      select('#nav-pills1').classList.add('active')
+      select('#nav-pills2').classList.remove('active')
+    
+    
+    
+  })
+
+  on('click', '#nav-pills2', function(e) {
+    
+      select('#nav-pills2').classList.add('active')
+      select('#nav-pills1 ').classList.remove('active')
+    
+    
+    
+  })
+
   /**
    * Mobile nav dropdowns activate
    */
@@ -135,7 +160,7 @@
       this.nextElementSibling.classList.toggle('dropdown-active')
     }
   }, true)
-
+ 
   /**
    * Scrool with ofset on links with a class name .scrollto
    */
@@ -218,6 +243,10 @@
       clickable: true
     }
   });
+
+  
+  // $("a").toggleClass("active");
+ 
 
   /**
    * Animation on scroll
