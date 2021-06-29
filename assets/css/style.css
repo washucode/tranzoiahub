@@ -1617,6 +1617,10 @@ section {
   color: #55C0CA;
 }
 
+#footlogo img{
+  max-width:200px;
+}
+
 /* join us form */
 
 .page-content {
@@ -2040,6 +2044,8 @@ section {
   background-color: #55C0CA;
   
 }
+
+
 
 
 /* loader */
