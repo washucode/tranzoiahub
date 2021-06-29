@@ -151,6 +151,37 @@
     
   })
 
+  var listItems = $(".navbar li");
+
+
+ 
+    
+
+
+  
+  on('click','#join', function(e) {
+      select('#join').classList.add('active')
+      select('#home').classList.remove('active')
+  })
+
+  on('click','#home', function(e) {
+    select('#home').classList.add('active')
+    select('#join').classList.remove('active')
+
+  })
+
+  on('click', '#nav-pills2', function(e) {
+    
+      select('#nav-pills2').classList.add('active')
+      select('#nav-pills1 ').classList.remove('active')
+    
+    
+    
+  })
+
+
+  
+
   /**
    * Mobile nav dropdowns activate
    */
@@ -258,6 +289,34 @@
       once: true,
       mirror: false
     });
+  });
+
+
+  // function show(){
+  //   document.getElementById("spinner-back").classList.add("show");
+  //   document.getElementById("spinner-front").classList.add("show");
+  // }
+  // function hide(){
+  //   document.getElementById("spinner-back").classList.remove("show");
+  //   document.getElementById("spinner-front").classList.remove("show");
+  // }
+  if (document.readyState != "complete"){
+    document.getElementById("spinner-back").classList.add("show");
+    document.getElementById("spinner-front").classList.add("show");
+
+  }
+
+  
+//   $(window).load(function() {
+//     document.getElementById("spinner-back").classList.remove("show");
+//     document.getElementById("spinner-front").classList.remove("show");
+// });
+
+
+  window.addEventListener('load', () => {
+    document.getElementById("spinner-back").classList.remove("show");
+    document.getElementById("spinner-front").classList.remove("show");
+
   });
 
 })()
