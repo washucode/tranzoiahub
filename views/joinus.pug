@@ -1,308 +1,171 @@
-doctype html
-html(lang='en')
-head
-    meta(charset='utf-8')
-    meta(content='width=device-width, initial-scale=1.0' name='viewport')
-    title Tranzoia Incubation Hub
-    meta(content='' name='description')
-    meta(content='' name='keywords')
+extends layout
+block content
 
-    link(href='/img/favicon.png' rel='icon')
-    link(href='/img/apple-touch-icon.png' rel='apple-touch-icon')
-    link(href='https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i,900' rel='stylesheet')
-    link(href='/vendor/animate.css/animate.min.css' rel='stylesheet')
-    link(href='/vendor/aos/aos.css' rel='stylesheet')
-    link(href='/vendor/bootstrap/css/bootstrap.min.css' rel='stylesheet')
-    link(href='/vendor/bootstrap-icons/bootstrap-icons.css' rel='stylesheet')
-    link(href='/vendor/boxicons/css/boxicons.min.css' rel='stylesheet')
-    link(href='/vendor/glightbox/css/glightbox.min.css' rel='stylesheet')
-    link(href='/vendor/swiper/swiper-bundle.min.css' rel='stylesheet')
-    link(href='/css/style.css', rel='stylesheet')
-    //- link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css')
-    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js')
-    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js')
+  .section#joinus.pt-5.pb-5
+    .nav.nav-pills.text-center
 
+      
+        a.btn-lg.active#nav-pills1(href='#org' data-toggle='pill') Join as an Organization
     
+        a.btn-lg#nav-pills2(href='#academia' data-toggle='pill') Join as an Academia
+      
 
-// ======= Top Bar =======
-section#topbar.d-flex.align-items-center
-  .container.d-flex.justify-content-center.justify-content-md-between
-    .contact-info.d-flex.align-items-center
-      i.bi.bi-envelope-fill
-      a(href='mailto:contact@example.com') info@tranzoiahub.com
-      i.bi.bi-phone-fill.phone-icon
-      |  +254 124 456 789
-    .social-links.d-none.d-md-block
-      a.twitter(href='#')
-        i.bi.bi-twitter
-      a.facebook(href='#')
-        i.bi.bi-facebook
-      a.instagram(href='#')
-        i.bi.bi-instagram
-      a.linkedin(href='#')
-        i.bi.bi-linkedin
-// ======= Header =======
-header#header.d-flex.align-items-center
-  .container.d-flex.align-items-center
-    .logo.me-auto
-      h1
-        a(href='index.html') TRANZOIA INCUBATION HUB
-      // Uncomment below if you prefer to use an image logo
-      // <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>
-    nav#navbar.navbar
-      ul
-        li
-          a.nav-link.scrollto(href='/') Home
-        li
-          a.nav-link.scrollto(href='/about') About
-        li
-          a.nav-link.scrollto(href='/programs') Our Programs
-        li
-          a.nav-link.scrollto(href='/#contact') Contact Us
-        li
-          a.nav-link.scrollto.active(href='/joinus') Join Us
-      i.bi.bi-list.mobile-nav-toggle
-    // .navbar
-// End Header
-// ======= Hero Section =======
+    .page-content.mt-5.tab-content
+      .form-v10-content.tab-pane.active#org
+        
+        form#myform.form-detail(action='#' method='post')
+          .form-left
+            h2 Personal Infomation(Organization)
+            
+              
+            .form-group
+              .form-row.form-row-1
+                input#first_name.input-text(type='text' name='first_name' placeholder='First Name' required='')
+              .form-row.form-row-2
+                input#last_name.input-text(type='text' name='last_name' placeholder='Last Name' required='')
+            .form-row
+              input#your_email.input-text(type='text' name='your_email' required='' pattern='[^@]+@[^@]+.[a-zA-Z]{2,6}' placeholder='Your Email')
+            
+            .form-row
+              input#pnumber.pmunber(type='number' name='pmunber' placeholder='+254 789 567 231' required='')
+            
+            .form-row.form-row-2
+              select(name='Gender')
+                option(value='gender') Gender
+                option(value='male') Male
+                option(value='female') Female
+                
+              span.select-btn
+                i.bi.bi-caret-down
+            .form-row.form-row-2
+              select(name='position')
+                option(value='position') Your Position/Rank in the organization
+                option(value='CEO') Chief Executive Officer (CEO)
+                option(value='COO') Chief Operating Officer (COO)
+                option(value='CFO') Chief Financial Officer (CFO) or Controller
+                option(value='CMO') Chief Marketing Officer (CMO)
+                option(value='CTO') Chief Technology Officer (CTO)
+                option(value='manager') Managerial Position
+                option(value='employee') Employee
+              span.select-btn
+                i.bi.bi-caret-down
+            .form-row
+              input#prole.prole(type='text' name='role' placeholder='Your role in the organization' required='')
 
+          
+          .form-right
+            h2 Information about the organization
+            .form-row
+              input#nameorg.nameorg(type='text' name='nameorg' placeholder='Name of Organization' required='')
+            
+            .form-group
+              .form-row
+                input#physicalocation.physicalocation(type='text' name='blocation' placeholder='Physcial Address' required='')
+              .form-row
+                input#postaladdress.postaladdress(type='text' name='baddress' placeholder='Postal Address' required='')
+                
+            .form-row
+              input#website.website(type='text' name='website' placeholder='Website/Social Media (eg:twitter,instagram)' required='')
+            .form-group
+              .form-row.form-row-1
+                select(name='profit' required='')
+                  option(value='profit') Type of Business
+                  option(value='male') Profit
+                  option(value='female') Non Profit
+                
+                span.select-btn
+                  i.bi.bi-caret-down
+              .form-row.form-row
+                select(name='noemployees' required='')
+                  option(value='number') No of Employees
+                  option(value='0-10') 0-10
+                  option(value='10-20') 10-20
+                  option(value='20-30') 20-30
+                  option(value='30-40') 30-40
+                  option(value='>50') > 50 
+                
+                span.select-btn
+                  i.bi.bi-caret-down
+            .form-row
+              input#additional.additional(type='text' name='additional' placeholder='Additional Information' )
+            
+            
+            //- .form-checkbox
+            //-   label.container
+            //-     p
+            //-       | I do accept the 
+            //-       a.text(href='#') Terms and Conditions
+            //-       |  of your site.
+            //-     input(type='checkbox' name='checkbox')
+            //-     span.checkmark
+            .form-row-last
+              input.register(type='submit' name='register' value='Register ')
 
+      .form-v10-content.tab-pane#academia
+        
+        form#myform.form-detail(action='#' method='post')
+          .form-left
+            h2 Personal Infomation(Academia)
+            
+            .form-group
+              .form-row.form-row-1
+                input#first_name.input-text(type='text' name='first_name' placeholder='First Name' required='')
+              .form-row.form-row-2
+                input#last_name.input-text(type='text' name='last_name' placeholder='Last Name' required='')
+            .form-row
+              input#your_email.input-text(type='text' name='your_email' required='' pattern='[^@]+@[^@]+.[a-zA-Z]{2,6}' placeholder='Your Email')
+            
+            .form-row
+              input#pnumber.pmunber(type='number' name='pmunber' placeholder='+254 789 567 231' required='')
+            
+            .form-row.form-row-2
+              select(name='Gender')
+                option(value='gender') Gender
+                option(value='male') Male
+                option(value='female') Female
+                
+              span.select-btn
+                i.bi.bi-caret-down
+            .form-row
+              input#i_email.input-text(type='text' name='i_email' required='' pattern='[^@]+@[^@]+.[a-zA-Z]{2,6}' placeholder='Instituational Email')
+          .form-right
+            h2 Information about the Institution
+            .form-row
+              input#nameorg.nameorg(type='text' name='nameinst' placeholder='Name of Institution' required='')
+            
+            .form-group
+              .form-row
+                input#physicalocation.physicalocation(type='text' name='ilocation' placeholder='Physcial Address' required='')
+              .form-row
+                input#postaladdress.postaladdress(type='text' name='iaddress' placeholder='Postal Address' required='')
+                
+            .form-row
+              input#website.website(type='text' name='website' placeholder='Institution Webiste/Social Media Handles' required='')
+            .form-group  
+              .form-row.form-row-1
+                input#study.study(type='text' name='study' placeholder='Field of study' required='')
+            
+              .form-row
+                input#research.research(type='text' name='research' placeholder='Area of Research' required='')
+            .form-row
+                input#researchd.researchd(type='text' name='researchd' placeholder='Title of Research Project ' required='')
+            .form-row
+              input#researcho.researcho(type='text' name='researchd' placeholder='Objectives of Research Project ' required='')
+                
+              
+              //- .form-row.form-row-2
+              //-   input#type.type(type='text' name='type' placeholder='Type of Business' required='')
+            
+            
+            //- .form-checkbox
+            //-   label.container
+            //-     p
+            //-       | I do accept the 
+            //-       a.text(href='#') Terms and Conditions
+            //-       |  of your site.
+            //-     input(type='checkbox' name='checkbox')
+            //-     span.checkmark
+            .form-row-last
+              input.register(type='submit' name='register' value='Register ')
 
-
-.section#joinus.pt-5.pb-5
-  .nav.nav-pills.text-center
-
-    
-      a.btn-lg.active#nav-pills1(href='#org' data-toggle='pill') Join as an Organization
   
-      a.btn-lg#nav-pills2(href='#academia' data-toggle='pill') Join as an Academia
-    
-
-  .page-content.mt-5.tab-content
-    .form-v10-content.tab-pane.active#org
-      
-      form#myform.form-detail(action='#' method='post')
-        .form-left
-          h2 Personal Infomation(Organization)
-          
-            
-          .form-group
-            .form-row.form-row-1
-              input#first_name.input-text(type='text' name='first_name' placeholder='First Name' required='')
-            .form-row.form-row-2
-              input#last_name.input-text(type='text' name='last_name' placeholder='Last Name' required='')
-          .form-row
-            input#your_email.input-text(type='text' name='your_email' required='' pattern='[^@]+@[^@]+.[a-zA-Z]{2,6}' placeholder='Your Email')
-           
-          .form-row
-            input#pnumber.pmunber(type='number' name='pmunber' placeholder='+254 789 567 231' required='')
-          
-          .form-row.form-row-2
-            select(name='Gender')
-              option(value='gender') Gender
-              option(value='male') Male
-              option(value='female') Female
-              
-            span.select-btn
-              i.bi.bi-caret-down
-          .form-row.form-row-2
-            select(name='position')
-              option(value='position') Your Position/Rank in the organization
-              option(value='CEO') Chief Executive Officer (CEO)
-              option(value='COO') Chief Operating Officer (COO)
-              option(value='CFO') Chief Financial Officer (CFO) or Controller
-              option(value='CMO') Chief Marketing Officer (CMO)
-              option(value='CTO') Chief Technology Officer (CTO)
-              option(value='manager') Managerial Position
-              option(value='employee') Employee
-            span.select-btn
-              i.bi.bi-caret-down
-          .form-row
-            input#prole.prole(type='text' name='role' placeholder='Your role in the organization' required='')
-
-         
-        .form-right
-          h2 Information about the organization
-          .form-row
-            input#nameorg.nameorg(type='text' name='nameorg' placeholder='Name of Organization' required='')
-          
-          .form-group
-            .form-row
-              input#physicalocation.physicalocation(type='text' name='blocation' placeholder='Physcial Address' required='')
-            .form-row
-              input#postaladdress.postaladdress(type='text' name='baddress' placeholder='Postal Address' required='')
-              
-          .form-row
-            input#website.website(type='text' name='website' placeholder='Website/Social Media (eg:twitter,instagram)' required='')
-          .form-group
-            .form-row.form-row-1
-              select(name='profit' required='')
-                option(value='profit') Type of Business
-                option(value='male') Profit
-                option(value='female') Non Profit
-              
-              span.select-btn
-                i.bi.bi-caret-down
-            .form-row.form-row
-              select(name='noemployees' required='')
-                option(value='number') No of Employees
-                option(value='0-10') 0-10
-                option(value='10-20') 10-20
-                option(value='20-30') 20-30
-                option(value='30-40') 30-40
-                option(value='>50') > 50 
-              
-              span.select-btn
-                i.bi.bi-caret-down
-          .form-row
-            input#additional.additional(type='text' name='additional' placeholder='Additional Information' )
-           
-          
-          //- .form-checkbox
-          //-   label.container
-          //-     p
-          //-       | I do accept the 
-          //-       a.text(href='#') Terms and Conditions
-          //-       |  of your site.
-          //-     input(type='checkbox' name='checkbox')
-          //-     span.checkmark
-          .form-row-last
-            input.register(type='submit' name='register' value='Register ')
-
-    .form-v10-content.tab-pane#academia
-      
-      form#myform.form-detail(action='#' method='post')
-        .form-left
-          h2 Personal Infomation(Academia)
-          
-          .form-group
-            .form-row.form-row-1
-              input#first_name.input-text(type='text' name='first_name' placeholder='First Name' required='')
-            .form-row.form-row-2
-              input#last_name.input-text(type='text' name='last_name' placeholder='Last Name' required='')
-          .form-row
-            input#your_email.input-text(type='text' name='your_email' required='' pattern='[^@]+@[^@]+.[a-zA-Z]{2,6}' placeholder='Your Email')
-           
-          .form-row
-            input#pnumber.pmunber(type='number' name='pmunber' placeholder='+254 789 567 231' required='')
-          
-          .form-row.form-row-2
-            select(name='Gender')
-              option(value='gender') Gender
-              option(value='male') Male
-              option(value='female') Female
-              
-            span.select-btn
-              i.bi.bi-caret-down
-          .form-row
-            input#i_email.input-text(type='text' name='i_email' required='' pattern='[^@]+@[^@]+.[a-zA-Z]{2,6}' placeholder='Instituational Email')
-        .form-right
-          h2 Information about the Institution
-          .form-row
-            input#nameorg.nameorg(type='text' name='nameinst' placeholder='Name of Institution' required='')
-          
-          .form-group
-            .form-row
-              input#physicalocation.physicalocation(type='text' name='ilocation' placeholder='Physcial Address' required='')
-            .form-row
-              input#postaladdress.postaladdress(type='text' name='iaddress' placeholder='Postal Address' required='')
-              
-          .form-row
-            input#website.website(type='text' name='website' placeholder='Institution Webiste/Social Media Handles' required='')
-          .form-group  
-            .form-row.form-row-1
-              input#study.study(type='text' name='study' placeholder='Field of study' required='')
-          
-            .form-row
-              input#research.research(type='text' name='research' placeholder='Area of Research' required='')
-          .form-row
-              input#researchd.researchd(type='text' name='researchd' placeholder='Title of Research Project ' required='')
-          .form-row
-            input#researcho.researcho(type='text' name='researchd' placeholder='Objectives of Research Project ' required='')
-              
-            
-            //- .form-row.form-row-2
-            //-   input#type.type(type='text' name='type' placeholder='Type of Business' required='')
-           
-          
-          //- .form-checkbox
-          //-   label.container
-          //-     p
-          //-       | I do accept the 
-          //-       a.text(href='#') Terms and Conditions
-          //-       |  of your site.
-          //-     input(type='checkbox' name='checkbox')
-          //-     span.checkmark
-          .form-row-last
-            input.register(type='submit' name='register' value='Register ')
-
-// ======= Footer =======
-footer#footer
-  .footer-top
-    .container
-      .row
-        .col-lg-3.col-md-6.footer-info
-          h3 Tranzoia Hub
-          p
-            | A108 Adam Street 
-            br
-            |               Tsanzoia
-            br
-            br
-            strong Phone:
-            |  +254 789 345 678
-            br
-            strong Email:
-            |  info@tranzoiahub.com
-            br
-          .social-links.mt-3
-            a.twitter(href='#')
-              i.bx.bxl-twitter
-            a.facebook(href='#')
-              i.bx.bxl-facebook
-            a.instagram(href='#')
-              i.bx.bxl-instagram
-            a.google-plus(href='#')
-              i.bx.bxl-skype
-            a.linkedin(href='#')
-              i.bx.bxl-linkedin
-        .col-lg-2.col-md-6.footer-links
-          h4 Useful Links
-          ul
-            li
-              i.bx.bx-chevron-right
-              a(href='/') Home
-            li
-              i.bx.bx-chevron-right
-              a(href='/about') About us
-            li
-              i.bx.bx-chevron-right
-              a(href='/programs') Our Programs
-            
-        .col-lg-4.col-md-6.footer-newsletter
-          h4 Our Newsletter
-          p Tamen quem nulla quae legam multos aute sint culpa legam noster magna
-          form(action='' method='post')
-            input(type='email' name='email')
-            input(type='submit' value='Subscribe')
-  .container
-    .copyright
-      | &copy; Copyright 
-      strong
-        span Tranzoia
-      | . All Rights Reserved
-    .credits
-      
-// End Footer
-a.back-to-top.d-flex.align-items-center.justify-content-center(href='#')
-  i.bi.bi-arrow-up-short
-// Vendor JS Files
-script(src='/vendor/aos/aos.js')
-script(src='/vendor/bootstrap/js/bootstrap.bundle.min.js')
-script(src='/vendor/glightbox/js/glightbox.min.js')
-script(src='/vendor/isotope-layout/isotope.pkgd.min.js')
-script(src='/vendor/php-email-form/validate.js')
-script(src='/vendor/purecounter/purecounter.js')
-script(src='/vendor/swiper/swiper-bundle.min.js')
-// Template Main JS File
-script(src='/js/main.js')

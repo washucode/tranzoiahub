@@ -1,291 +1,162 @@
-doctype html
-html(lang='en')
-head
-    meta(charset='utf-8')
-    meta(content='width=device-width, initial-scale=1.0' name='viewport')
-    title Tranzoia Incubation Hub
-    meta(content='' name='description')
-    meta(content='' name='keywords')
+extends layout
+block content
+  // ======= Hero Section =======
 
-    link(href='/img/favicon.png' rel='icon')
-    link(href='/img/apple-touch-icon.png' rel='apple-touch-icon')
-    link(href='https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i,900' rel='stylesheet')
-    link(href='/vendor/animate.css/animate.min.css' rel='stylesheet')
-    link(href='/vendor/aos/aos.css' rel='stylesheet')
-    link(href='/vendor/bootstrap/css/bootstrap.min.css' rel='stylesheet')
-    link(href='/vendor/bootstrap-icons/bootstrap-icons.css' rel='stylesheet')
-    link(href='/vendor/boxicons/css/boxicons.min.css' rel='stylesheet')
-    link(href='/vendor/glightbox/css/glightbox.min.css' rel='stylesheet')
-    link(href='/vendor/swiper/swiper-bundle.min.css' rel='stylesheet')
-    link(href='/css/style.css', rel='stylesheet')
+  section#hero
+    .hero-container
+      #heroCarousel.carousel.slide.carousel-fade(data-bs-ride='carousel' data-bs-interval='7000')
+        ol#hero-carousel-indicators.carousel-indicators
+        .carousel-inner(role='listbox')
+          // Slide 1
+          .carousel-item.active(style="background-image: url('/img/slide/slide-1.jpg');")
+            .carousel-container
+              .carousel-content.container
+                h2.animate__animated.animate__fadeInDown
+                  | Tapping into the innovation culture -
+                  span The innovation generation.
+                p.animate__animated.animate__fadeInUp
+                  | Central to our thinking is the belief that the best ideas for transforming any community, town, city or country, comes from innovative thinkers and entrepreneurs in our local community, the people who live and work in Kenya.
+                a.btn-get-started.animate__animated.animate__fadeInUp.scrollto(href='/about') Read More
+          // Slide 2
+          .carousel-item(style="background-image: url('/img/slide/slide-2.jpg');")
+            .carousel-container
+              .carousel-content.container
+                h2.animate__animated.animate__fadeInDown Support innovations,build the future!
+                p.animate__animated.animate__fadeInUp
+                  | By supporting Tranzoia Hub you equip ambitious innovators with needed resources to make significant global changes to improve lives and shape a better future.
+                a.btn-get-started.animate__animated.animate__fadeInUp.scrollto(href='/about') Read More
+          // Slide 3
+          .carousel-item(style="background-image: url('/img/slide/slide-3.jpg');")
+            .carousel-container
+              .carousel-content.container
+                h2.animate__animated.animate__fadeInDown Protect our mother Nature
+                p.animate__animated.animate__fadeInUp
+                  |One of our concerns is to promote and encourage projects,ideas and businesses that focus on going green and renewable energy production.We strongly believe that renewable energy is a major solution to climate change.
+                a.btn-get-started.animate__animated.animate__fadeInUp.scrollto(href='/about') Read More
+        a.carousel-control-prev(href='#heroCarousel' role='button' data-bs-slide='prev')
+          span.carousel-control-prev-icon.bi.bi-chevron-left(aria-hidden='true')
+        a.carousel-control-next(href='#heroCarousel' role='button' data-bs-slide='next')
+          span.carousel-control-next-icon.bi.bi-chevron-right(aria-hidden='true')
+  // End Hero
+  main#main
+    // ======= About Us Section =======
+    section#about.about
+      .container(data-aos='fade-up')
+        .row.no-gutters
+          .col-lg-6.video-box
+            img.img-fluid(src='/img/about.jpg' alt='')
+          //-   a.venobox.play-btn.mb-4(href='https://www.youtube.com/watch?v=jDDaplaOz7Q' data-vbtype='video' data-autoplay='true')
+          .col-lg-6.d-flex.flex-column.justify-content-center.about-content
+            .section-title
+              h2 About Us
+              h4 Who we are
+              p
+                | We are a non-profit global community focusing on entrepreneurial incubation, acceleration and the focused business innovation and development across different diversities.
+            .icon-box(data-aos='fade-up' data-aos-delay='100')
+              .icon
+                i.bx.bx-fingerprint
+              h4.title
+                a(href='/about') Purpose of this hub
+              p.description
+                | Create and form systems of community response with guaranteed outcomes, by agreed community participation with the primary focus to develop social entrepreneurs who produce service businesses that provide health, social and educational programs.
+            .icon-box(data-aos='fade-up' data-aos-delay='100')
+              .icon
+                i.bx.bx-group
+              h4.title
+                a(href='/about') Partnerships &amp; Impact
+              p.description
+                | The organization partnerships are based on the necessity of direct socially based capital interventions, with the goal to improve life and create opportunities for all  especially  disadvantaged persons.
+            a.btn-about.justify-content-center.mx-auto.animate__animated.animate__fadeInUp.scrollto(href='/about') Read More
+    // End About Us Section
     
-
-// ======= Top Bar =======
-section#topbar.d-flex.align-items-center
-  .container.d-flex.justify-content-center.justify-content-md-between
-    .contact-info.d-flex.align-items-center
-      i.bi.bi-envelope-fill
-      a(href='mailto:contact@example.com') info@tranzoiahub.com
-      i.bi.bi-phone-fill.phone-icon
-      |  +254 124 456 789
-    .social-links.d-none.d-md-block
-      a.twitter(href='#')
-        i.bi.bi-twitter
-      a.facebook(href='#')
-        i.bi.bi-facebook
-      a.instagram(href='#')
-        i.bi.bi-instagram
-      a.linkedin(href='#')
-        i.bi.bi-linkedin
-// ======= Header =======
-header#header.d-flex.align-items-center
-  .container.d-flex.align-items-center
-    .logo.me-auto
-      h1
-        a(href='index.html') TRANZOIA INCUBATION HUB
-      // Uncomment below if you prefer to use an image logo
-      // <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>
-    nav#navbar.navbar
-      ul
-        li
-          a.nav-link.scrollto.active(href='#hero') Home
-        li
-          a.nav-link.scrollto(href='/about') About
-        li
-          a.nav-link.scrollto(href='/programs') Our Programs
-        li
-          a.nav-link.scrollto(href='#contact') Contact Us
-        li
-          a.nav-link.scrollto(href='/joinus') Join Us
-      i.bi.bi-list.mobile-nav-toggle
-    // .navbar
-// End Header
-// ======= Hero Section =======
-section#hero
-  .hero-container
-    #heroCarousel.carousel.slide.carousel-fade(data-bs-ride='carousel' data-bs-interval='7000')
-      ol#hero-carousel-indicators.carousel-indicators
-      .carousel-inner(role='listbox')
-        // Slide 1
-        .carousel-item.active(style="background-image: url('/img/slide/slide-1.jpg');")
-          .carousel-container
-            .carousel-content.container
-              h2.animate__animated.animate__fadeInDown
-                | Tapping into the innovation culture -
-                span The innovation generation.
-              p.animate__animated.animate__fadeInUp
-                | Central to our thinking is the belief that the best ideas for transforming any community, town, city or country, comes from innovative thinkers and entrepreneurs in our local community, the people who live and work in Kenya.
-              a.btn-get-started.animate__animated.animate__fadeInUp.scrollto(href='/about') Read More
-        // Slide 2
-        .carousel-item(style="background-image: url('/img/slide/slide-2.jpg');")
-          .carousel-container
-            .carousel-content.container
-              h2.animate__animated.animate__fadeInDown Support innovations,build the future!
-              p.animate__animated.animate__fadeInUp
-                | By supporting Tranzoia Hub you equip ambitious innovators with needed resources to make significant global changes to improve lives and shape a better future.
-              a.btn-get-started.animate__animated.animate__fadeInUp.scrollto(href='/about') Read More
-        // Slide 3
-        .carousel-item(style="background-image: url('/img/slide/slide-3.jpg');")
-          .carousel-container
-            .carousel-content.container
-              h2.animate__animated.animate__fadeInDown Protect our mother Nature
-              p.animate__animated.animate__fadeInUp
-                |One of our concerns is to promote and encourage projects,ideas and businesses that focus on going green and renewable energy production.We strongly believe that renewable energy is a major solution to climate change.
-              a.btn-get-started.animate__animated.animate__fadeInUp.scrollto(href='/about') Read More
-      a.carousel-control-prev(href='#heroCarousel' role='button' data-bs-slide='prev')
-        span.carousel-control-prev-icon.bi.bi-chevron-left(aria-hidden='true')
-      a.carousel-control-next(href='#heroCarousel' role='button' data-bs-slide='next')
-        span.carousel-control-next-icon.bi.bi-chevron-right(aria-hidden='true')
-// End Hero
-main#main
-  // ======= About Us Section =======
-  section#about.about
-    .container(data-aos='fade-up')
-      .row.no-gutters
-        .col-lg-6.video-box
-          img.img-fluid(src='/img/about.jpg' alt='')
-        //-   a.venobox.play-btn.mb-4(href='https://www.youtube.com/watch?v=jDDaplaOz7Q' data-vbtype='video' data-autoplay='true')
-        .col-lg-6.d-flex.flex-column.justify-content-center.about-content
-          .section-title
-            h2 About Us
-            h4 Who we are
-            p
-              | We are a non-profit global community focusing on entrepreneurial incubation, acceleration and the focused business innovation and development across different diversities.
-          .icon-box(data-aos='fade-up' data-aos-delay='100')
+    // ======= programs Section =======
+    section#programs.programs
+      .container(data-aos='fade-up')
+        .section-title
+          h2 Our Programs
+        .row 
+          .col-lg-2.col-md-2
+          .col-lg-8.col-md-8.icon-box(data-aos='fade-up')
+              p.mb-5.description.lh-lg
+              | Our programs are designed to initiate and accelerate the start-up, growth and sustainability for social entrepreneurs and their organizations  enabling them to succeed and remain sustainable over a long period of time.
+          .col-lg-2.col-md-2
+        .row.readmore.justify-content-center
+          .col-lg-4.col-md-6.icon-box(data-aos='fade-up')
             .icon
-              i.bx.bx-fingerprint
+              i.bx.bxs-business
             h4.title
-              a(href='/about') Purpose of this hub
+              a(href='') Model business/entrepreneurial incubation system
             p.description
-              | Create and form systems of community response with guaranteed outcomes, by agreed community participation with the primary focus to develop social entrepreneurs who produce service businesses that provide health, social and educational programs.
-          .icon-box(data-aos='fade-up' data-aos-delay='100')
+              | For start-ups and existing small businesses
+            a.btn-about.justify-content-center.mx-auto.animate__animated.animate__fadeInUp.scrollto(href='/programs') Read More
+          .col-lg-4.col-md-6.icon-box(data-aos='fade-up' data-aos-delay='100')
             .icon
-              i.bx.bx-group
+              i.bx.bx-donate-heart
             h4.title
-              a(href='/about') Partnerships &amp; Impact
+              a(href='') Model business incubation and acceleration system
             p.description
-              | The organization partnerships are based on the necessity of direct socially based capital interventions, with the goal to improve life and create opportunities for all  especially  disadvantaged persons.
-          a.btn-about.justify-content-center.mx-auto.animate__animated.animate__fadeInUp.scrollto(href='/about') Read More
-  // End About Us Section
-  
-  // ======= programs Section =======
-  section#programs.programs
-    .container(data-aos='fade-up')
-      .section-title
-        h2 Our Programs
-      .row 
-        .col-lg-2.col-md-2
-        .col-lg-8.col-md-8.icon-box(data-aos='fade-up')
-            p.mb-5.description.lh-lg
-             | Our programs are designed to initiate and accelerate the start-up, growth and sustainability for social entrepreneurs and their organizations  enabling them to succeed and remain sustainable over a long period of time.
-        .col-lg-2.col-md-2
-      .row.readmore.justify-content-center
-        .col-lg-4.col-md-6.icon-box(data-aos='fade-up')
-          .icon
-            i.bx.bxs-business
-          h4.title
-            a(href='') Model business/entrepreneurial incubation system
-          p.description
-            | For start-ups and existing small businesses
-          a.btn-about.justify-content-center.mx-auto.animate__animated.animate__fadeInUp.scrollto(href='/programs') Read More
-        .col-lg-4.col-md-6.icon-box(data-aos='fade-up' data-aos-delay='100')
-          .icon
-            i.bx.bx-donate-heart
-          h4.title
-            a(href='') Model business incubation and acceleration system
-          p.description
-            | For non-profit organizations
-          a.btn-about.justify-content-center.mx-auto.animate__animated.animate__fadeInUp.scrollto(href='/programs') Read More
-        .col-lg-4.col-md-6.icon-box(data-aos='fade-up' data-aos-delay='200')
-          .icon
-            i.bx.bx-bulb
-          h4.title
-            a(href='') Model business incubation and acceleration system
-          p.description
-            | For those in college or TVET
-          a.btn-about.justify-content-center.mx-auto.animate__animated.animate__fadeInUp.scrollto(href='/programs') Read More
-          //- h4.title
-          //-   a(href='') Model business incubation and acceleration system
-          //- p.description.lh-lg
-          //-   | For those in college or TVET
-          //-   //- (Technical and Vocational Education and Training)
-          //- a.btn-about.justify-content-center.mx-auto.animate__animated.animate__fadeInUp.scrollto(href='/programs') Read More
-  // End programs Section
-  
-  
-  // ======= Contact Us Section =======
-  section#contact.contact
-    .container(data-aos='fade-up')
-      .section-title
-        h2 Contact Us
-      .row
-        .col-lg-6.d-flex(data-aos='fade-up')
-          .info-box
-            i.bx.bx-map
-            h3 Our Address
-            p A108 Adam Street, Address, Addres
-        .col-lg-3.d-flex(data-aos='fade-up' data-aos-delay='100')
-          .info-box
-            i.bx.bx-envelope
-            h3 Email Us
-            p
-              | info@tranzoiahub.com
-              br
-              | tranzoia@tranzoiahub.com
-        .col-lg-3.d-flex(data-aos='fade-up' data-aos-delay='200')
-          .info-box
-            i.bx.bx-phone-call
-            h3 Call Us
-            p
-              | +245 123 456 789
-              br
-              | +254 657 789 900
-        .col-lg-12(data-aos='fade-up' data-aos-delay='300')
-          form.php-email-form(action='forms/contact.php' method='post' role='form')
-            .row
-              .col-lg-6.form-group
-                input#name.form-control(type='text' name='name' placeholder='Your Name' required='')
-              .col-lg-6.form-group
-                input#email.form-control(type='email' name='email' placeholder='Your Email' required='')
-            .form-group
-              input#subject.form-control(type='text' name='subject' placeholder='Subject' required='')
-            .form-group
-              textarea.form-control(name='message' rows='5' placeholder='Message' required='')
-            .my-3
-              .loading Loading
-              .error-message
-              .sent-message Your message has been sent. Thank you!
-            .text-center
-              button(type='submit') Send Message
-  // End Contact Us Section
-// End #main
-// ======= Footer =======
-footer#footer
-  .footer-top
-    .container
-      .row
-        .col-lg-3.col-md-6.footer-info
-          h3 Tranzoia Hub
-          p
-            | A108 Adam Street 
-            br
-            |               Tsanzoia
-            br
-            br
-            strong Phone:
-            |  +254 789 345 678
-            br
-            strong Email:
-            |  info@tranzoiahub.com
-            br
-          .social-links.mt-3
-            a.twitter(href='#')
-              i.bx.bxl-twitter
-            a.facebook(href='#')
-              i.bx.bxl-facebook
-            a.instagram(href='#')
-              i.bx.bxl-instagram
-            a.google-plus(href='#')
-              i.bx.bxl-skype
-            a.linkedin(href='#')
-              i.bx.bxl-linkedin
-        .col-lg-2.col-md-6.footer-links
-          h4 Useful Links
-          ul
-            li
-              i.bx.bx-chevron-right
-              a(href='/') Home
-            li
-              i.bx.bx-chevron-right
-              a(href='#about') About us
-            li
-              i.bx.bx-chevron-right
-              a(href='#programs') Our Programs
-            
-        .col-lg-4.col-md-6.footer-newsletter
-          h4 Our Newsletter
-          p Enter Email to Subscribe to our newsletter
-          form(action='' method='post')
-            input(type='email' name='email')
-            input(type='submit' value='Subscribe')
-  .container
-    .copyright
-      | &copy; Copyright 
-      strong
-        span Tranzoia
-      | . All Rights Reserved
-    .credits
-      
-// End Footer
-a.back-to-top.d-flex.align-items-center.justify-content-center(href='#')
-  i.bi.bi-arrow-up-short
-// Vendor JS Files
-script(src='/vendor/aos/aos.js')
-script(src='/vendor/bootstrap/js/bootstrap.bundle.min.js')
-script(src='/vendor/glightbox/js/glightbox.min.js')
-script(src='/vendor/isotope-layout/isotope.pkgd.min.js')
-script(src='/vendor/php-email-form/validate.js')
-script(src='/vendor/purecounter/purecounter.js')
-script(src='/vendor/swiper/swiper-bundle.min.js')
-// Template Main JS File
-script(src='/js/main.js')
+              | For non-profit organizations
+            a.btn-about.justify-content-center.mx-auto.animate__animated.animate__fadeInUp.scrollto(href='/programs') Read More
+          .col-lg-4.col-md-6.icon-box(data-aos='fade-up' data-aos-delay='200')
+            .icon
+              i.bx.bx-bulb
+            h4.title
+              a(href='') Model business incubation and acceleration system
+            p.description
+              | For those in college or TVET
+            a.btn-about.justify-content-center.mx-auto.animate__animated.animate__fadeInUp.scrollto(href='/programs') Read More
+            //- h4.title
+            //-   a(href='') Model business incubation and acceleration system
+            //- p.description.lh-lg
+            //-   | For those in college or TVET
+            //-   //- (Technical and Vocational Education and Training)
+            //- a.btn-about.justify-content-center.mx-auto.animate__animated.animate__fadeInUp.scrollto(href='/programs') Read More
+    // End programs Section
+    
+    
+    // ======= Contact Us Section =======
+    section#contact.contact
+      .container(data-aos='fade-up')
+        .section-title
+          h2 Contact Us
+        .row
+          .col-lg-6.d-flex(data-aos='fade-up')
+            .info-box
+              i.bx.bx-map
+              h3 Our Address
+              p   
+          .col-lg-3.d-flex(data-aos='fade-up' data-aos-delay='100')
+            .info-box
+              i.bx.bx-envelope
+              h3 Email Us
+              p
+                | info@transzoiahub.com
+                br
+                | tranzoia@transzoiahub.com
+          .col-lg-3.d-flex(data-aos='fade-up' data-aos-delay='200')
+            .info-box
+              i.bx.bx-phone-call
+              h3 Call Us
+              p
+                | +245 123 456 789
+                br
+                | +254 657 789 900
+          .col-lg-12(data-aos='fade-up' data-aos-delay='300')
+            form.php-email-form(action='forms/contact.php' method='post' role='form')
+              .row
+                .col-lg-6.form-group
+                  input#name.form-control(type='text' name='name' placeholder='Your Name' required='')
+                .col-lg-6.form-group
+                  input#email.form-control(type='email' name='email' placeholder='Your Email' required='')
+              .form-group
+                input#subject.form-control(type='text' name='subject' placeholder='Subject' required='')
+              .form-group
+                textarea.form-control(name='message' rows='5' placeholder='Message' required='')
+              .my-3
+                .loading Loading
+                .error-message
+                .sent-message Your message has been sent. Thank you!
+              .text-center
+                button(type='submit') Send Message
+    // End Contact Us Section
+  // End #main
