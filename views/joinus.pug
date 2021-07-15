@@ -13,24 +13,24 @@ block content
     .page-content.mt-5.tab-content
       .form-v10-content.tab-pane.active#org
         
-        form#myform.form-detail(action='#' method='post')
+        form#myform.form-detail(action='/usersO' method='post')
           .form-left
             h2 Personal Infomation(Organization)
             
               
             .form-group
               .form-row.form-row-1
-                input#first_name.input-text(type='text' name='first_name' placeholder='First Name' required='')
+                input#first_name.input-text(type='text' name='firstname' placeholder='First Name' required='')
               .form-row.form-row-2
-                input#last_name.input-text(type='text' name='last_name' placeholder='Last Name' required='')
+                input#last_name.input-text(type='text' name='surname' placeholder='Last Name' required='')
             .form-row
-              input#your_email.input-text(type='text' name='your_email' required='' pattern='[^@]+@[^@]+.[a-zA-Z]{2,6}' placeholder='Your Email')
+              input#your_email.input-text(type='text' name='email' required='' pattern='[^@]+@[^@]+.[a-zA-Z]{2,6}' placeholder='Your Email')
             
             .form-row
-              input#pnumber.pmunber(type='number' name='pmunber' placeholder='+254 789 567 231' required='')
+              input#pnumber.pmunber(type='number' name='phoneNumber' placeholder='+254 789 567 231' required='')
             
             .form-row.form-row-2
-              select(name='Gender')
+              select(name='gender')
                 option(value='gender') Gender
                 option(value='male') Male
                 option(value='female') Female
@@ -38,7 +38,7 @@ block content
               span.select-btn
                 i.bi.bi-caret-down
             .form-row.form-row-2
-              select(name='position')
+              select(name='rank')
                 option(value='position') Your Position/Rank in the organization
                 option(value='CEO') Chief Executive Officer (CEO)
                 option(value='COO') Chief Operating Officer (COO)
@@ -56,19 +56,19 @@ block content
           .form-right
             h2 Information about the organization
             .form-row
-              input#nameorg.nameorg(type='text' name='nameorg' placeholder='Name of Organization' required='')
+              input#nameorg.nameorg(type='text' name='organizationName' placeholder='Name of Organization' required='')
             
             .form-group
               .form-row
-                input#physicalocation.physicalocation(type='text' name='blocation' placeholder='Physcial Address' required='')
+                input#physicalocation.physicalocation(type='text' name='physicalAddress' placeholder='Physcial Address' required='')
               .form-row
-                input#postaladdress.postaladdress(type='text' name='baddress' placeholder='Postal Address' required='')
+                input#postaladdress.postaladdress(type='text' name='postalAddress' placeholder='Postal Address' required='')
                 
             .form-row
-              input#website.website(type='text' name='website' placeholder='Website/Social Media (eg:twitter,instagram)' required='')
+              input#website.website(type='text' name='social' placeholder='Website/Social Media (eg:twitter,instagram)' required='')
             .form-group
               .form-row.form-row-1
-                select(name='profit' required='')
+                select(name='typeOfBusiness' required='')
                   option(value='profit') Type of Business
                   option(value='male') Profit
                   option(value='female') Non Profit
@@ -76,7 +76,7 @@ block content
                 span.select-btn
                   i.bi.bi-caret-down
               .form-row.form-row
-                select(name='noemployees' required='')
+                select(name='noOfEmployees' required='')
                   option(value='number') No of Employees
                   option(value='0-10') 0-10
                   option(value='10-20') 10-20
@@ -87,7 +87,7 @@ block content
                 span.select-btn
                   i.bi.bi-caret-down
             .form-row
-              input#additional.additional(type='text' name='additional' placeholder='Additional Information' )
+              input#additional.additional(type='text' name='additionalInfo' placeholder='Additional Information' )
             
             
             //- .form-checkbox
@@ -103,20 +103,20 @@ block content
 
       .form-v10-content.tab-pane#academia
         
-        form#myform.form-detail(action='#' method='post')
+        form#myform.form-detail(action='/usersA' method='post')
           .form-left
             h2 Personal Infomation(Academia)
             
             .form-group
               .form-row.form-row-1
-                input#first_name.input-text(type='text' name='first_name' placeholder='First Name' required='')
+                input#first_name.input-text(type='text' name='firstname' placeholder='First Name' required='')
               .form-row.form-row-2
-                input#last_name.input-text(type='text' name='last_name' placeholder='Last Name' required='')
+                input#last_name.input-text(type='text' name='surname' placeholder='Last Name' required='')
             .form-row
-              input#your_email.input-text(type='text' name='your_email' required='' pattern='[^@]+@[^@]+.[a-zA-Z]{2,6}' placeholder='Your Email')
+              input#your_email.input-text(type='text' name='email' required='' pattern='[^@]+@[^@]+.[a-zA-Z]{2,6}' placeholder='Your Email')
             
             .form-row
-              input#pnumber.pmunber(type='number' name='pmunber' placeholder='+254 789 567 231' required='')
+              input#pnumber.pmunber(type='number' name='phoneNumber' placeholder='+254 789 567 231' required='')
             
             .form-row.form-row-2
               select(name='Gender')
@@ -127,30 +127,30 @@ block content
               span.select-btn
                 i.bi.bi-caret-down
             .form-row
-              input#i_email.input-text(type='text' name='i_email' required='' pattern='[^@]+@[^@]+.[a-zA-Z]{2,6}' placeholder='Instituational Email')
+              input#i_email.input-text(type='text' name='institutionEmail' required='' pattern='[^@]+@[^@]+.[a-zA-Z]{2,6}' placeholder='Instituational Email')
           .form-right
             h2 Information about the Institution
             .form-row
-              input#nameorg.nameorg(type='text' name='nameinst' placeholder='Name of Institution' required='')
+              input#nameorg.nameorg(type='text' name='institutionName' placeholder='Name of Institution' required='')
             
             .form-group
               .form-row
-                input#physicalocation.physicalocation(type='text' name='ilocation' placeholder='Physcial Address' required='')
+                input#physicalocation.physicalocation(type='text' name='physicalAddress' placeholder='Physcial Address' required='')
               .form-row
-                input#postaladdress.postaladdress(type='text' name='iaddress' placeholder='Postal Address' required='')
+                input#postaladdress.postaladdress(type='text' name='postalAddress' placeholder='Postal Address' required='')
                 
             .form-row
-              input#website.website(type='text' name='website' placeholder='Institution Webiste/Social Media Handles' required='')
+              input#website.website(type='text' name='Institutionsocial' placeholder='Institution Webiste/Social Media Handles' required='')
             .form-group  
               .form-row.form-row-1
-                input#study.study(type='text' name='study' placeholder='Field of study' required='')
+                input#study.study(type='text' name='fieldOfStudy' placeholder='Field of study' required='')
             
               .form-row
-                input#research.research(type='text' name='research' placeholder='Area of Research' required='')
+                input#research.research(type='text' name='areaOfresearch' placeholder='Area of Research' required='')
             .form-row
-                input#researchd.researchd(type='text' name='researchd' placeholder='Title of Research Project ' required='')
+                input#researchd.researchd(type='text' name='titleOfResearchProject' placeholder='Title of Research Project ' required='')
             .form-row
-              input#researcho.researcho(type='text' name='researchd' placeholder='Objectives of Research Project ' required='')
+              input#researcho.researcho(type='text' name='objOfResearch' placeholder='Objectives of Research Project ' required='')
                 
               
               //- .form-row.form-row-2

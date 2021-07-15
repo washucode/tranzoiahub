@@ -18,8 +18,11 @@
   },
   "homepage": "https://github.com/washucode/tranzoiahub#readme",
   "dependencies": {
+    "body-parser": "^1.19.0",
     "bootstrap": "^5.0.1",
     "express": "^4.17.1",
+    "mysql": "^2.18.1",
+    "pg": "^8.6.0",
     "pug": "^3.0.2",
     "twilio": "^3.63.1"
   }
