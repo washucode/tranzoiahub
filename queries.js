@@ -1,10 +1,7 @@
 const Pool = require('pg').Pool
+const {DB_USER,DB_HOST,DATABASE,PASSWORD,DB_PORT } = require('./config');
 const pool = new Pool({
-  user: 'admin',
-  host: 'localhost',
-  database: 'transzoiadb',
-  password: 'password',
-  port: 5432,
+  DB_USER,PASSWORD,DATABASE,DB_HOST,DB_PORT
 })
 
 
