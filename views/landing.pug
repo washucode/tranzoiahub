@@ -142,7 +142,7 @@ block content
                 br
                 | +254 657 789 900
           .col-lg-12(data-aos='fade-up' data-aos-delay='300')
-            form.php-email-form(action='forms/contact.php' method='post' role='form')
+            form.php-email-form(action='/contactus' method='post' role='form')
               .row
                 .col-lg-6.form-group
                   input#name.form-control(type='text' name='name' placeholder='Your Name' required='')
@@ -153,9 +153,9 @@ block content
               .form-group
                 textarea.form-control(name='message' rows='5' placeholder='Message' required='')
               .my-3
-                .loading Loading
-                .error-message
-                .sent-message Your message has been sent. Thank you!
+                //- .loading Loading
+                //- .error-message
+                //- .sent-message Your message has been sent. Thank you!
               .text-center
                 button(type='submit') Send Message
     // End Contact Us Section
