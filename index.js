@@ -4,7 +4,7 @@ const app = express();
 const port = 4000;
 const db = require('./queries')
 const nodemailer = require('nodemailer')
- const { MAIL_USER,  MAIL_PASS } = require('./config');
+// const { MAIL_USER,  MAIL_PASS } = require('./config');//not required for now
  
 
 app.use(bodyParser.json())
@@ -14,9 +14,9 @@ app.use(
   })
 )
 
-app.post('/usersO', db.createOrgUser)
+// app.post('/usersO', db.createOrgUser)
 
-app.post('/usersA', db.createAcaUser)
+// app.post('/usersA', db.createAcaUser)
 
 app.set("view engine","pug");
 app.use(express.static( 'assets'));
