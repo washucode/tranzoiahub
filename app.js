@@ -52,7 +52,7 @@ app.post('/contactus', (req, res) => {
 
   // Instantiate the SMTP server
   const smtpTrans = nodemailer.createTransport({
-    host: 'tranzoiahub.com',
+    host: 'trans-nzoia.com',
     port: 465,
     secure: true,
     auth: {
