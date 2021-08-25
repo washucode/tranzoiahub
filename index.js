@@ -42,9 +42,9 @@ app.get('/about', function (req, res) {
     res.render("joinus");
   });
 
-app.listen(port, function () {
-  console.log(`Example app listening on port ${port}!`);
-});
+// app.listen(port, function () {
+//   console.log(`Example app listening on port ${port}!`);
+// });
 
 
 
@@ -81,7 +81,4 @@ app.post('/contactus', (req, res) => {
   })
 })
 
-module.exports = app
-
-
-
+module.exports = app;
