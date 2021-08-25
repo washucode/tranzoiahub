@@ -12,7 +12,7 @@ app.use(
   bodyParser.urlencoded({
     extended: true,
   })
-)module.exports = app;
+)
 
 // app.post('/usersO', db.createOrgUser)
 
