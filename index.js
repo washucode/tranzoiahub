@@ -12,7 +12,7 @@ app.use(
   bodyParser.urlencoded({
     extended: true,
   })
-)
+)module.exports = app;
 
 // app.post('/usersO', db.createOrgUser)
 
@@ -80,5 +80,8 @@ app.post('/contactus', (req, res) => {
     }
   })
 })
+
+module.exports = app
+
 
 
