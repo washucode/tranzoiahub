@@ -18,10 +18,13 @@
   },
   "homepage": "https://github.com/washucode/tranzoiahub#readme",
   "dependencies": {
+    "@google-cloud/storage": "^5.14.0",
     "body-parser": "^1.19.0",
     "bootstrap": "^5.0.1",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
+    "firebase": "^9.0.0",
+    "multer": "^1.4.3",
     "mysql": "^2.18.1",
     "nodemailer": "^6.6.3",
     "pg": "^8.6.0",

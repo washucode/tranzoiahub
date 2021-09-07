@@ -1,11 +1,13 @@
 const express = require('express');
 const bodyParser = require('body-parser')
 const app = express();
-const port = 4000;
-const db = require('./queries')
+const port = 3000;
+// const db = require('./queries')
 const nodemailer = require('nodemailer')
 // const { MAIL_USER,  MAIL_PASS } = require('./config');//not required for now
  
+
+
 
 app.use(bodyParser.json())
 app.use(
@@ -13,6 +15,7 @@ app.use(
     extended: true,
   })
 )
+
 
 // app.post('/usersO', db.createOrgUser)
 
@@ -42,9 +45,6 @@ app.get('/about', function (req, res) {
     res.render("joinus");
   });
 
-// app.listen(port, function () {
-//   console.log(`Example app listening on port ${port}!`);
-// });
 
 
 
@@ -82,7 +82,6 @@ app.post('/contactus', (req, res) => {
 })
 
 var server = app.listen()
-
 
 // var http = require('http');
 // var server = http.createServer(function(req, res) {
