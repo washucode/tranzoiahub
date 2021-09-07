@@ -947,16 +947,19 @@ section {
   background: #55C0CA;
   bottom: 0;
   left: calc(50% - 25px);
+
 }
 
-.programs .description {
-  /* line-height: 1px; */
-  font-size: 18px;
+.programs .description{
+  text-align: center;
+  font-style: italic;
+  color: #666;
+  font-size:18px;
 }
 
-.programs .description  p{
+
+.programs   p{
   
-  font-size: 18px;
 }
 .readmore .btn-about{
   font-family: "Raleway", sans-serif;
