@@ -74,34 +74,34 @@ footer#footer.mt-6
   .footer-top
     .container
       .row
-        .col-lg-3.col-md-6.footer-info
+        .col-lg-4.col-md-6.footer-info
           h3#footlogo
             a(href='/')
               img.img-fluid(src='/img/translogo.svg' alt='')
-          p
-            | 
-            br
-            |               Transzoia
-            br
-            br
-            strong Phone:
-            |  +254 791 262 789 
-            br
-            strong Email:
-            |  info@transnzoiahub.com
-            br
-          .social-links.mt-3
-            a.twitter(href='#')
-              i.bx.bxl-twitter
-            a.facebook(href='#')
-              i.bx.bxl-facebook
-            a.instagram(href='#')
-              i.bx.bxl-instagram
-            a.google-plus(href='#')
-              i.bx.bxl-skype
-            a.linkedin(href='#')
-              i.bx.bxl-linkedin
-        .col-lg-2.col-md-6.footer-links
+          .row 
+            .col-lg-12
+              p
+                | A non-profit global community focusing on entrepreneurial incubation, acceleration and the focused business innovation and development across different diversities
+            .col-lg-12 
+              link(href='//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css' rel='stylesheet' type='text/css')
+              style(type='text/css').
+                #mc_embed_signup{ font:14px; font-family: "Raleway", sans-serif; width:100%;align-items:left;}
+                /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+                We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+              #mc_embed_signup
+                form#mc-embedded-subscribe-form.validate(action='https://gmail.us6.list-manage.com/subscribe/post?u=1b13a227eb554e4080ebe771d&id=536fd44c9e' method='post' name='mc-embedded-subscribe-form' target='_blank' novalidate='')
+                  #mc_embed_signup_scroll
+                    input#mce-EMAIL.email(type='email' value='' name='EMAIL' placeholder='example@gmail.com' style='text-align:center; height:50px;' required='')
+                    // real people should not fill this in and expect good things - do not remove this or risk form bot signups
+                    div(style='position: absolute; left: -6000px;' aria-hidden='true')
+                      input(type='text' name='b_1b13a227eb554e4080ebe771d_536fd44c9e' tabindex='-1' value='')
+                    .clear.pt-3()
+                      input#mc-embedded-subscribe.button.btn-lg(type='submit' value='Subscribe to our Newsletter' name='subscribe' style='color:white;background:#55C0CA; height:40px;')
+
+
+
+            
+        .col-lg-4.col-md-6.footer-links
           h4 Useful Links
           ul
             li
@@ -115,6 +115,24 @@ footer#footer.mt-6
               a(href='/programs') Our Programs
             
         .col-lg-4.col-md-6.footer-newsletter
+          h4  Contacts
+          strong Phone:
+            |  +254 791 262 789 
+            br
+          strong Email:
+            |  info@transnzoia.com
+            br
+          .social-links.mt-3
+            a.twitter(href='#')
+              i.bx.bxl-twitter
+            a.facebook(href='#')
+              i.bx.bxl-facebook
+            a.instagram(href='#')
+              i.bx.bxl-instagram
+            a.google-plus(href='#')
+              i.bx.bxl-skype
+            a.linkedin(href='#')
+              i.bx.bxl-linkedin
           
   .container
     .copyright
