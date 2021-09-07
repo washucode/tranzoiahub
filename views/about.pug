@@ -1,16 +1,17 @@
 extends layout
 block content  
   main#main
-    .section-title 
-      h1.mt-5  About Us
+    
     // ======= About Us Section =======
     section#about.about
+      .section-title 
+        h1.mt-5  About Us
       .container(data-aos='fade-up')
         .row.no-gutters
           
           .col-lg-6.video-box
             img.img-fluid(src='/img/about2.jpg' alt='')
-            //- a.venobox.play-btn.mb-4(href='https://www.youtube.com/watch?v=jDDaplaOz7Q' data-vbtype='video' data-autoplay='true')
+            a.venobox.play-btn.mb-4(href='https://www.youtube.com/watch?v=jDDaplaOz7Q' data-vbtype='video' data-autoplay='true')
           .col-lg-6.d-flex.flex-column.justify-content-center.about-content
             .section-title
               

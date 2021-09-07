@@ -1349,6 +1349,7 @@ section {
 # Contact Us
 --------------------------------------------------------------*/
 .contact .info-box {
+  font-family: "Raleway", sans-serif;
   color: #050401;
   text-align: center;
   box-shadow: 0 0 30px #EEF0F2;
@@ -1366,6 +1367,7 @@ section {
 }
 
 .contact .info-box h3 {
+  font-family: "Raleway", sans-serif;
   font-size: 20px;
   color: #050401;
   font-weight: 700;
@@ -1373,6 +1375,7 @@ section {
 }
 
 .contact .info-box p {
+  font-family: "Raleway", sans-serif;
   padding: 0;
   line-height: 24px;
   font-size: 14px;
@@ -1483,6 +1486,12 @@ section {
   padding: 0 0 30px 0;
   color: #fff;
   font-size: 14px;
+  font-family: 'Raleway' sans-serif;
+}
+
+.footer-contacts,.footer-links{
+  font-size: 16px;
+  font-family: 'Raleway' sans-serif;
 }
 
 #footer .footer-top {
@@ -1495,6 +1504,7 @@ section {
 
 #footer .footer-top .footer-info {
   margin-bottom: 30px;
+  
 }
 
 #footer .footer-top .footer-info h3 {
@@ -1505,6 +1515,17 @@ section {
   font-weight: 700;
 }
 
+.footer-top h4:after {
+  width: 60px;
+  height: 4px;
+  background: black;
+  position: absolute;
+  bottom: -4px;
+ 
+
+  /* transform: translate(-50%); */
+}
+
 #footer .footer-top .footer-info p {
   font-size: 14px;
   line-height: 24px;
@@ -1512,7 +1533,9 @@ section {
   font-family: "Raleway", sans-serif;
   color: #050401;
 }
-
+#footer .footer-top .social-links {
+  margin-left:-20%;
+}
 #footer .footer-top .social-links a {
   font-size: 18px;
   display: inline-block;
@@ -1535,7 +1558,7 @@ section {
 }
 
 #footer .footer-top h4 {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 600;
   color: #050401;
   position: relative;
@@ -1543,6 +1566,7 @@ section {
 }
 
 #footer .footer-top .footer-links {
+  font-family: 'Raleway' sans-serif;
   margin-bottom: 30px;
 }
 
@@ -1614,6 +1638,7 @@ section {
 }
 
 #footer .copyright {
+  font-family: "Raleway", sans-serif;
   text-align: center;
   padding-top: 30px;
 }
@@ -1632,6 +1657,40 @@ section {
 #footlogo img{
   max-width:200px;
 }
+
+#footer .footer-top .footer-links ul{
+  /* margin:auto;  */
+  padding-left:40%;
+  font-family: "Raleway", sans-serif;
+}
+.footer-info #mc_embed_signup{
+  margin-left: -10%;
+}
+
+@media screen and (max-width: 767px) {
+  .footer-info #mc_embed_signup{
+    margin-left: 0;
+    
+
+  }
+
+  
+
+  #footer .footer-top .footer-links ul{
+    /* margin:auto;  */
+    padding-left:0;
+    font-family: "Raleway", sans-serif;
+  }
+  #footer .footer-top .social-links {
+    margin-left:0%;
+  }
+}
+
+
+/* #footer .footer-top .footer-contacts .social-links {
+  padding-left: 40%;
+  font-family: "Raleway", sans-serif;
+} */
 
 /* join us form */
 
