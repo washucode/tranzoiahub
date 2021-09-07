@@ -103,6 +103,10 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   color: #7D98A1;
 }
 
+@media screen {
+  
+}
+
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
@@ -268,6 +272,8 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   .navbar ul {
     display: none;
   }
+ 
+  
 }
 
 .navbar-mobile {
@@ -275,9 +281,10 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   overflow: hidden;
   top: 0;
   right: 0;
-  left: 0;
+  left: 20%;
   bottom: 0;
-  background: #55C0CA;
+  background: #000;
+  opacity: 99%;
   transition: 0.3s;
   z-index: 998;
 }
@@ -490,6 +497,11 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   #hero h2 {
     font-size: 28px;
   }
+  #topbar {
+    
+    font-size: 11px;
+    height: 50px;
+  }
 }
 
 @media (max-height: 500px) {
@@ -610,7 +622,7 @@ section {
 }
 
 .about .section-title p {
-  text-align: left;
+  text-align: center;
   font-style: italic;
   color: #666;
   font-size:18px;
