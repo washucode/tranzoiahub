@@ -1,3 +1,8 @@
+
+
+
+
+
 // const Pool = require('pg').Pool
 // const {DB_USER,DB_HOST,DATABASE,PASSWORD,DB_PORT } = require('./config');
 // const pool = new Pool({
@@ -47,12 +52,3 @@
 //   }
 
 
-var admin = require("firebase-admin");
-
-var serviceAccount = require("./serviceActionKey.json");
-
-admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount)
-});
-
-const db = admin.firestore();
