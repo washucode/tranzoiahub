@@ -1,0 +1,12 @@
+{
+    "type": "service_account",
+    "project_id": "transzoiahub",
+    "private_key_id": "1483f8a9e9da89d228499a54e66714aad790cd61",
+    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCvFn7EBzHSff0L\nk7NABX6sYl+jhBYyNKfF0ndFWE9M3hbE6pr7S0BLpv2yPvQTRSqNSsezxbKQJy9f\n3o7L5TXjrJPQ1/Vk8AkeELEhW4BhIKPbJE+h9jSbHsU6K5N4wkIR3h0XamgdQWNx\nYmfIOyORFgoROGrRYM4y8FYU7IhMGzsO8P3atYwtM6VFJDB1MUvphm/3D3hauhkN\nFhU+MrzXErZBA8ZbS3K+SIwl9/0CxDPWUZPr5w6f8qCf6VW3SKh1n1M3YN414LTF\nRsa2h/0smAUrPSuqXcylBGxywx+2VI2nQySb3PGzz6yjzYZv1KY9D++gONJrjtDR\n8jzWjVWJAgMBAAECggEAAL7mqBDUR15aQCz/PdHwK82I9P40Zn8XKlZmw+S4BL6q\n5+iMY67avZ++054lRbo9D8g+YL+CLs896kl9P/TQVZGH+SMcVFNZ5JcDXB4ixjcg\nf4fQb4MIDxOS2Tgzivd/1snkg5OkUSCUyvg1czK+SGlIvnFIMi9YfXrM0Q6/V1yi\nAlhSs6VVPRJEywzZcEigvqpfpxxCU5oceIOmQ6tRjyomAUk5wZK5L/zXmr6QMS0L\nFqqhUy7VxfzjQL+Tb5FnSE2+JHaPnbN112aXTFXqBsT37lV7MAgL1MmpxWorv+Tm\nRsYsCZq0QpQmoI0NbwR6iJQivXu7ZPnNRUbttgt1sQKBgQDx7gslU0Abxjtn7uVX\nMc5wX8lZL0XW7EUWfJx20D/fVwSUAhBZZoAHqM6zSyJFUdjigGGs7GNaLvhQRQZH\nn25818kvKC/5+k+LoyXN6BJnmc9kalxypsl8n+u70EUOoBvDOjjiKUICLks/RqsT\nDyNPA1sKj0wxtDvpq32+RH0uUQKBgQC5RUd6x2X0GewY0SC1JJm+86z555/1P71I\nnIRegoIwoen63lLipqBNbUQb9O86DRs5wYB56e3nvCawh/v+QUV/61AOi/dh3xgO\nxynYqKlM8zQ1oL5PTPdgVkUA0Gc3btHMcecB4QPYN/wn7wa4jvmFB8vCrasMhSi3\nnYCK+gDNuQKBgQDhx5ArU1hfE09Znb/28gqBIUOdsdpxy6pmZAD5eTxCyMkDADIV\n3OzbORU+in3/R3UrXTjK0wmdnnwrHV/Q899/LzsYgV7U4l/eJ3IeidizSv4b7o88\niJ89aVnsu1/XWGDQf8OafXqW4nFjKiZ58QS4tp7+aeFn+ZZ4ao09Rlm1IQKBgE5L\nqNmKStvN2KjkOB5VSWQZNpCmAkNynFuDSa1nGf3Tbz5FlmGSaUxPUOk/qZmu0EKo\nM9NRuOil6vPPg/7/No/IshxzqigCT/hu0pBtNp7+aKIBPGvm6uQbkS225OfYPXFY\n8Xcp0KYfgsCdkwmL4ocFtGahXhf8biiqtxgEbzKBAoGAdyVwbpOL6en6/yUYKkAO\nPQnGkVNc8Btu7mKKJaaTg5dOsJGmeBlYUhXhvqM9EpK3lbIL9l4dFhO6x7xlS7nN\niY4Tg3W6VDzAP1/uL8pH47BwLnqidhlKbqjxy4EAXWjZYpQbHirqSw4t6AeRwv8R\nCkz6o16djyiNTBQSvQUkk68=\n-----END PRIVATE KEY-----\n",
+    "client_email": "firebase-adminsdk-kg5g9@transzoiahub.iam.gserviceaccount.com",
+    "client_id": "105668360070401479478",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-kg5g9%40transzoiahub.iam.gserviceaccount.com"
+  }
