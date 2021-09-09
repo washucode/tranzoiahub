@@ -4,7 +4,7 @@ const app = express();
 const port = 3000;
 // const db = require('./queries')
 const nodemailer = require('nodemailer')
-// const { MAIL_USER,  MAIL_PASS } = require('./config');//not required for now
+const { MAIL_USER,  MAIL_PASS } = require('./config');//not required for now
  
 
 
@@ -52,20 +52,20 @@ app.post('/contactus', (req, res) => {
 
   // Instantiate the SMTP server
   const smtpTrans = nodemailer.createTransport({
-    host: 'trans-nzoia.com',
+    host: 'transnzoiahub.com',
     port: 465,
     secure: true,
     auth: {
-      user: MAIL_USER,
-      pass: MAIL_PASS
+      user: 'info@transnzoiahub.com',
+      pass: 'pOV;F{duemQ['
     }
   })
 
   // Specify what the email will look like
   const mailOpts = {
     from: `${req.body.email}`, // This is ignored by Gmail
-    to: MAIL_USER,
-    subject: 'New message from contact form at tranzoiahub.com, the subject is' ,
+    to: 'info@transnzoiahub.com',
+    subject: 'New message from contact form at transnzoiahub.com, the subject is' ,
     text: `${req.body.name} (${req.body.email}) says: ${req.body.message}`
   }
 
@@ -81,7 +81,7 @@ app.post('/contactus', (req, res) => {
   })
 })
 
-var server = app.listen()
+var server = app.listen(port)
 
 // var http = require('http');
 // var server = http.createServer(function(req, res) {
